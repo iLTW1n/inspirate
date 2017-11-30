@@ -5,6 +5,7 @@ import Background from './Components/Background';
 import Time from './Components/Time';
 import Phrase from './Components/Phrase';
 import Button from './Components/Button';
+import ButtonAddPhrase from './Components/ButtonAddPhrase';
 
 import PHRASES from '../Data';
 
@@ -26,6 +27,7 @@ class RandomPhrases extends Component {
   render () {
     return (
       <div className='random-phrases'>
+        <h1 className='random-phrases-title'>INS<span>PIRATE</span></h1>
         <Background
           changeImage={ this.state.number }
         />
@@ -33,6 +35,7 @@ class RandomPhrases extends Component {
         <Phrase
           changePhrase={ this.state.number }
         />
+        <ButtonAddPhrase />
         <Button
           generatePhrase={ this.generatePhrase }
         />

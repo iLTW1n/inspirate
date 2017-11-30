@@ -1,0 +1,31 @@
+.button-add-phrase {
+  position: absolute;
+  top: 92%;
+  left: 30px;
+  transform: translateY(-92%);
+  padding: 5px;
+}
+
+.button-add-phrase .add-phrase {
+  padding: 10px 0 20px 0;
+}
+
+.button-add-phrase .add-phrase > input {
+  display: flex;
+  background: transparent;
+  margin: 10px 0;
+  padding-left: 10px;
+  outline: none;
+  color: white;
+  border: 1px solid white;
+  width: 300px;
+  height: 37px;
+  border-radius: 5px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .button-add-phrase {
+    left: 50px;
+  }
+}

@@ -39,19 +39,19 @@ const phrases = [
     id: 7,
     author: 'Charles F. Kettering',
     phrase: '“Un problema bien planteado es un problema medio resuelto.”',
-    img: 'https://images.unsplash.com/photo-1422304901405-b00a4efc3dd5?auto=format&fit=crop&w=1047&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D',
+    img: 'https://images.unsplash.com/photo-1502759683299-cdcd6974244f?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D',
   },
   {
     id: 8,
     author: 'J.P. Morgan',
     phrase: '“Un hombre tiene siempre dos razones para hacer lo que hace: una buena y otra auténtica.”',
-    img: 'https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1190&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D',
+    img: 'https://images.unsplash.com/photo-1458724029936-2cc6ee38f5ef?auto=format&fit=crop&w=1051&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D',
   },
   {
     id: 9,
     author: 'Platón',
     phrase: '“La necesidad es la madre de la invención.”',
-    img: 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D',
+    img: 'https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?auto=format&fit=crop&w=1051&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D',
   },
   {
     id: 10,

@@ -1,1 +1,1 @@
-## Random Phrases (ReactJs)
+## Inspire Phrases (ReactJs)
