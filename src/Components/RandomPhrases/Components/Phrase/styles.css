@@ -19,12 +19,23 @@
 
 .random-phrase > .random-phrase-author {
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.651);
+  color: rgba(255, 255, 255, 0.733);
   font-size: 15px;
+  display: inline-block;
 }
-.random-phrase > .random-phrase-author > div {
+.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  transition: opacity .4s;
+}
+.random-phrase-author > div {
   display: inline;
 }
+
 .random-phrase > .random-phrase-author .random-phrase-author_icons {
   margin-left: 10px;
   font-weight: bold;

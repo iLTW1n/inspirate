@@ -5,12 +5,32 @@ import './styles.css';
 
 class Button extends Component {
 
+  state = {
+    showAuthor: false
+  }
+
+  handleShowAuthorMouseEnter = () => {
+    this.setState({
+      showAuthor: true
+    });
+  }
+
+  handleHideAuthorMouseLeave = () => {
+    this.setState({
+      showAuthor: false
+    });
+  }
+
   render () {
     return (
-      <div className='random-phrase'>
+      <div
+        onMouseEnter={ this.handleShowAuthorMouseEnter }
+        onMouseLeave={ this.handleHideAuthorMouseLeave }
+        className='random-phrase'
+      >
         <p>{ this.props.changePhrase.phrase }</p>
         <span
-          className='random-phrase-author'
+          className={ this.state.showAuthor ? 'random-phrase-author show' : 'random-phrase-author hide'}
         >
           { this.props.changePhrase.author }
           <Router>
