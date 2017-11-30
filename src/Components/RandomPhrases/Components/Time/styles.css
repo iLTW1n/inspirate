@@ -1,0 +1,12 @@
+.time {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.time .hour {
+  font-size: 28px;
+  margin: 0 8px;
+  font-weight: 300;
+  letter-spacing: -1px;
+}

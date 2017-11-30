@@ -1,0 +1,48 @@
+.random-phrase {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding-bottom: 10px;
+}
+
+.random-phrase > p {
+  font-weight: 300;
+  font-size: 18px;
+  padding: 10px 20px 0 10px;
+  transition: all .5s;
+  line-height: 30px;
+}
+
+.random-phrase > .random-phrase-author {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.651);
+  font-size: 15px;
+}
+.random-phrase > .random-phrase-author > div {
+  display: inline;
+}
+.random-phrase > .random-phrase-author .random-phrase-author_icons {
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+.random-phrase > .random-phrase-author .random-phrase-author_icons.heart:hover {
+  color: red;
+}
+.random-phrase > .random-phrase-author .random-phrase-author_icons.twitter:hover {
+  color: #1da1f2;
+}
+.random-phrase > .random-phrase-author .random-phrase-author_icons.facebook:hover {
+  color: #487be0;
+}
+@media only screen and (min-width: 768px) {
+  .random-phrase > p {
+    font-size: 28px;
+    font-weight: 200;
+  }
+}

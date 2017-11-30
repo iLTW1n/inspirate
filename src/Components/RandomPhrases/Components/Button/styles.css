@@ -1,0 +1,21 @@
+.random-button {
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -92%);
+}
+
+.random-button > button {
+  padding: 12px 22px;
+  outline: none;
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  border: 1.4px solid white;
+  font-weight: 500;
+}
