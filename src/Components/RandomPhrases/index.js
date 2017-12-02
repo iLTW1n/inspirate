@@ -15,9 +15,17 @@ class RandomPhrases extends Component {
     number: PHRASES[Math.floor(0 + (Math.random() * (10 - 0)))],
   }
 
+  addPhrase = (...authorPhraseImage) => {
+    let author = authorPhraseImage[0];
+    let phrase = authorPhraseImage[1];
+    let theUrlImage = authorPhraseImage[2];
+    PHRASES.push({author: author, phrase: phrase, theUrlImage: theUrlImage});
+  }
+
   generatePhrase = () => {
     const min = 0;
-    const max = 10;
+    const max = PHRASES.length;
+    console.log('mac',max)
     let rand = PHRASES[Math.floor(min + (Math.random() * (max - min)))]
     this.setState({
       number: rand
@@ -29,16 +37,15 @@ class RandomPhrases extends Component {
       <div className='random-phrases'>
         <h1 className='random-phrases-title'>INS<span>PIRATE</span></h1>
         <Background
-          changeImage={ this.state.number }
-        />
+          changeImage={ this.state.number } />
         <Time />
         <Phrase
-          changePhrase={ this.state.number }
+          changePhrase={ this.state.number } />
+        <ButtonAddPhrase
+          addPhrase={ this.addPhrase }
         />
-        <ButtonAddPhrase />
         <Button
-          generatePhrase={ this.generatePhrase }
-        />
+          generatePhrase={ this.generatePhrase } />
       </div>
     )
   }

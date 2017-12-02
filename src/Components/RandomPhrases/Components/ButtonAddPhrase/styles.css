@@ -1,16 +1,38 @@
-.button-add-phrase {
-  position: absolute;
-  top: 92%;
-  left: 30px;
-  transform: translateY(-92%);
-  padding: 5px;
+.showfade-enter {
+  opacity: 0;
+  transform: translateY(-200px);
 }
 
-.button-add-phrase .add-phrase {
+.showfade-enter.showfade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .3s ease-in;
+}
+
+.showfade-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.showfade-leave.showfade-leave-active {
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: all .3s ease-out;
+}
+
+
+.button-show-fade {
+  position: absolute;
+  bottom: 8.1%;
+  left: 20px;
+  padding: 0 5px;
+}
+
+.button-show-fade .show-fade {
   padding: 10px 0 20px 0;
 }
 
-.button-add-phrase .add-phrase > input {
+.button-show-fade .show-fade > input {
   display: flex;
   background: transparent;
   margin: 10px 0;
@@ -22,10 +44,12 @@
   height: 37px;
   border-radius: 5px;
 }
-
+.button-show-fade .show-fade > input::placeholder {
+  color: rgba(255, 255, 255, 0.568);
+}
 
 @media only screen and (min-width: 768px) {
-  .button-add-phrase {
+  .button-show-fade {
     left: 50px;
   }
 }

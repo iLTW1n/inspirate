@@ -1,6 +1,6 @@
 .random-phrase {
   position: absolute;
-  width: 70%;
+  width: 90%;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -55,5 +55,8 @@
   .random-phrase > p {
     font-size: 28px;
     font-weight: 200;
+  }
+  .random-phrase {
+    width: 70%;
   }
 }

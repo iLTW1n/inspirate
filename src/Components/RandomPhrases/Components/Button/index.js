@@ -13,7 +13,7 @@ class Button extends Component {
         <button
           onClick={ this.handleGeneratePhraseClick }
         >
-          CAMBIAR FRASE
+          CHANGE PHRASE
         </button>
       </div>
     )

@@ -4,24 +4,81 @@ import './styles.css';
 
 class ButtonAddPhrase extends Component {
 
+  state = {
+    showfade: false,
+    author: '',
+    phrase: '',
+    theUrlImage: ''
+  }
+
+  handleAuthorChange = (e) => {
+    this.setState({
+      author: (e.target.value).trim()
+    });
+  }
+
+  handlePhraseChange = (e) => {
+    this.setState({
+      phrase: (e.target.value).trim()
+    });
+  }
+
+  handleUrlChange = (e) => {
+    this.setState({
+      theUrlImage: (e.target.value).trim()
+    });
+  }
+
+  handleSendPhraseClick = () => {
+    let author = this.state.author
+    let phrase = this.state.phrase
+    let theUrlImage = this.state.theUrlImage
+    this.props.addPhrase(author, phrase, theUrlImage);
+
+    this.setState({
+      showfade: !this.state.showfade
+    });
+  }
+
   handleAddPhraseClick = () => {
-    alert('fsdf');
+    this.setState({
+      showfade: !this.state.showfade
+    });
   }
 
   render () {
     return (
-      <div className='button-add-phrase'>
-        <CSSTransitionGroup>
-          <div className='add-phrase'>
-            <input type='text' placeholder='Author'/>
-            <input type='text' placeholder='Phrase' />
-            <input type='text' placeholder='La URL de la imagen' />
-            <button>Enviar</button>
-          </div>
+      <div className='button-show-fade'>
+        <CSSTransitionGroup
+          transitionName='showfade'
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+        >
+          {
+            this.state.showfade &&
+            <div className='show-fade'>
+              <input
+                onChange={ this.handleAuthorChange }
+                type='text'
+                placeholder='Author'
+                value={ this.state.author } />
+              <input
+                onChange={ this.handlePhraseChange }
+                type='text'
+                placeholder='Phrase'
+                value={ this.state.phrase } />
+              <input
+                onChange={ this.handleUrlChange }
+                type='text'
+                placeholder='The url of the image'
+                value={ this.state.theUrlImage } />
+              <button
+                onClick={ this.handleSendPhraseClick }>Send</button>
+            </div>
+          }
         </CSSTransitionGroup>
         <button
-          onClick={ this.handleAddPhraseClick }
-        >ADD</button>
+          onClick={ this.handleAddPhraseClick }>{ this.state.showfade ? 'CANCEL' : 'ADD' }</button>
       </div>
     )
   }
