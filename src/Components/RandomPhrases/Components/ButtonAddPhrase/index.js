@@ -11,12 +11,14 @@ class ButtonAddPhrase extends Component {
   render () {
     return (
       <div className='button-add-phrase'>
-        <div className='add-phrase'>
-          <input type='text' placeholder='Author'/>
-          <input type='text' placeholder='Phrase' />
-          <input type='text' placeholder='La URL de la imagen' />
-          <button>Enviar</button>
-        </div>
+        <CSSTransitionGroup>
+          <div className='add-phrase'>
+            <input type='text' placeholder='Author'/>
+            <input type='text' placeholder='Phrase' />
+            <input type='text' placeholder='La URL de la imagen' />
+            <button>Enviar</button>
+          </div>
+        </CSSTransitionGroup>
         <button
           onClick={ this.handleAddPhraseClick }
         >ADD</button>
