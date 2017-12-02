@@ -33,10 +33,18 @@ class ButtonAddPhrase extends Component {
     let author = this.state.author
     let phrase = this.state.phrase
     let theUrlImage = this.state.theUrlImage
-    this.props.addPhrase(author, phrase, theUrlImage);
+
+    if ((author === '' || phrase === '') || theUrlImage === '' ) {
+      console.log('llene el formulario')
+    } else {
+      this.props.addPhrase(author, phrase, theUrlImage);
+    }
 
     this.setState({
-      showfade: !this.state.showfade
+      showfade: !this.state.showfade,
+      author: '',
+      phrase: '',
+      theUrlImage: ''
     });
   }
 

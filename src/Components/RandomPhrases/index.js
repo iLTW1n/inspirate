@@ -16,16 +16,16 @@ class RandomPhrases extends Component {
   }
 
   addPhrase = (...authorPhraseImage) => {
+    console.log(PHRASES)
     let author = authorPhraseImage[0];
     let phrase = authorPhraseImage[1];
     let theUrlImage = authorPhraseImage[2];
-    PHRASES.push({author: author, phrase: phrase, theUrlImage: theUrlImage});
+    PHRASES.push({author: author, phrase: `“${ phrase }”`, img: theUrlImage});
   }
 
   generatePhrase = () => {
     const min = 0;
     const max = PHRASES.length;
-    console.log('mac',max)
     let rand = PHRASES[Math.floor(min + (Math.random() * (max - min)))]
     this.setState({
       number: rand
