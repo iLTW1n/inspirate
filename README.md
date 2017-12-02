@@ -8,8 +8,8 @@ Agregue las frases que quieras recordarlo más tarde.
 </p>
 <br/>
 
-<p align="left">
-  <img width=100%" src="screen-mobile.png" />
+<p align="center">
+  <img width=40%" src="screen-mobile.png" />
 </p>
 
 <br/>
