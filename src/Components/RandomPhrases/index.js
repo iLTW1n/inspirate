@@ -19,8 +19,7 @@ class RandomPhrases extends Component {
     console.log(PHRASES)
     let author = authorPhraseImage[0];
     let phrase = authorPhraseImage[1];
-    let theUrlImage = authorPhraseImage[2];
-    PHRASES.push({author: author, phrase: `“${ phrase }”`, img: theUrlImage});
+    PHRASES.push({author: author, phrase: `“${ phrase }”`});
   }
 
   generatePhrase = () => {

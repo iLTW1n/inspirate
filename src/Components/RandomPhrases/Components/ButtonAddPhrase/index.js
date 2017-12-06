@@ -8,7 +8,6 @@ class ButtonAddPhrase extends Component {
     showfade: false,
     author: '',
     phrase: '',
-    theUrlImage: ''
   }
 
   handleAuthorChange = (e) => {
@@ -23,28 +22,20 @@ class ButtonAddPhrase extends Component {
     });
   }
 
-  handleUrlChange = (e) => {
-    this.setState({
-      theUrlImage: (e.target.value).trim()
-    });
-  }
-
   handleSendPhraseClick = () => {
     let author = this.state.author
     let phrase = this.state.phrase
-    let theUrlImage = this.state.theUrlImage
 
-    if ((author === '' || phrase === '') || theUrlImage === '' ) {
+    if ((author === '' || phrase === '') ) {
       console.log('llene el formulario')
     } else {
-      this.props.addPhrase(author, phrase, theUrlImage);
+      this.props.addPhrase(author, phrase);
     }
 
     this.setState({
       showfade: !this.state.showfade,
       author: '',
       phrase: '',
-      theUrlImage: ''
     });
   }
 
@@ -76,10 +67,8 @@ class ButtonAddPhrase extends Component {
                 placeholder='Phrase'
                 value={ this.state.phrase } />
               <input
-                onChange={ this.handleUrlChange }
                 type='text'
-                placeholder='The url of the image'
-                value={ this.state.theUrlImage } />
+                placeholder='The image will be random (disabled)' disabled />
               <button
                 onClick={ this.handleSendPhraseClick }>Send</button>
             </div>
