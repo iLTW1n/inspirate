@@ -15,10 +15,5 @@ Agregue las frases que quieras recordarlo más tarde.
 <br/>
 
 <p align="left">
-<<<<<<< HEAD
   <img width=100%" src="screen-blackrandom.png" />
 </p>
-=======
-  <img width=100%" src="screen-randomm.png" />
-</p>
->>>>>>> 7f0cdeb70f55088324db55dbd85d0fdbfd087579
