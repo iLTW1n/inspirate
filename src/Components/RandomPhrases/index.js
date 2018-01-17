@@ -17,9 +17,17 @@ class RandomPhrases extends Component {
 
   addPhrase = (...authorPhraseImage) => {
     console.log(PHRASES)
-    let author = authorPhraseImage[0];
-    let phrase = authorPhraseImage[1];
-    PHRASES.push({author: author, phrase: `“${ phrase }”`});
+    const imagesPayRandom = Math.floor(1 + (Math.random() * 10));
+    let author = authorPhraseImage[0],
+        phrase = authorPhraseImage[1],
+        ids = Math.random(),
+        img = require(`../../Images/${imagesPayRandom}.jpg`);
+    PHRASES.push({
+      id: ids,
+      author,
+      phrase: `“${ phrase }”`,
+      img,
+    });
   }
 
   generatePhrase = () => {

@@ -14,12 +14,18 @@ class ButtonAddPhrase extends Component {
     this.setState({
       author: (e.target.value).trim()
     });
+    if (e.key === 'Enter') {
+      this.handleSendPhraseClick();
+    }
   }
 
   handlePhraseChange = (e) => {
     this.setState({
       phrase: (e.target.value).trim()
     });
+    if (e.key === 'Enter') {
+      this.handleSendPhraseClick();
+    }
   }
 
   handleSendPhraseClick = () => {
@@ -58,11 +64,13 @@ class ButtonAddPhrase extends Component {
             <div className='show-fade'>
               <input
                 onChange={ this.handleAuthorChange }
+                onKeyPress={ this.handleAuthorChange }
                 type='text'
                 placeholder='Author'
                 value={ this.state.author } />
               <input
                 onChange={ this.handlePhraseChange }
+                onKeyPress={ this.handlePhraseChange}
                 type='text'
                 placeholder='Phrase'
                 value={ this.state.phrase } />
