@@ -45,7 +45,8 @@ class Button extends Component {
                 />
               </Link>
               <Link
-                to='#'
+                target='_blank'
+                to={`https://twitter.com/intent/tweet?text=${this.props.changePhrase.phrase}&amp;url=https://josktgui.github.io/inspire-phrases/&amp;via=JOsktguiH`}
                 className='random-phrase-author_icons twitter'  
               >
                 <FontAwesome
@@ -54,7 +55,8 @@ class Button extends Component {
                 />
               </Link>
               <Link
-                to='#'
+                target='_blank'
+                to={`https://www.facebook.com/sharer/sharer.php?u=https://josktgui.github.io/inspire-phrases/`}
                 className='random-phrase-author_icons facebook'
               >
                 <FontAwesome

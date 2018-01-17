@@ -53,3 +53,8 @@
     left: 50px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .button-show-fade .show-fade > input {
+    width: 228px;
+  }
+}
